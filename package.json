@@ -1,0 +1,12 @@
+{
+  "name": "trip-kanban",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "jco componentize src/board.js --wit wit --world-name board --disable all -o board.wasm"
+  },
+  "devDependencies": {
+    "@bytecodealliance/componentize-js": "^0.23.0",
+    "@bytecodealliance/jco": "^1.39.0"
+  }
+}

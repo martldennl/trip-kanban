@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kanban</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Not a form: the frame is sandboxed without forms, so nothing would be submitted. -->
+    <div id="add">
+      <input id="title" placeholder="A new card…" maxlength="200" autocomplete="off" />
+      <button id="add-card" type="button">Add</button>
+    </div>
+    <main id="columns"></main>
+    <p id="status" role="status"></p>
+    <script src="app.js"></script>
+  </body>
+</html>
