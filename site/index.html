@@ -7,12 +7,18 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Not a form: the frame is sandboxed without forms, so nothing would be submitted. -->
-    <div id="add">
-      <input id="title" placeholder="A new card…" maxlength="200" autocomplete="off" />
+    <!-- Where the plan stands: how much is done, as a bar, and each column's count. -->
+    <header id="plan">
+      <strong id="done"></strong>
+      <div id="bar"></div>
+      <span id="counts"></span>
+    </header>
+    <main id="columns"></main>
+    <!-- Not a form: the frame is sandboxed without forms, so nothing would be submitted. It sits under the first column's cards. -->
+    <div id="add" hidden>
+      <input id="title" placeholder="Add a card…" maxlength="200" autocomplete="off" />
       <button id="add-card" type="button">Add</button>
     </div>
-    <main id="columns"></main>
     <p id="status" role="status"></p>
     <script src="app.js"></script>
   </body>

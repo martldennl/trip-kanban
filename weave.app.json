@@ -1,5 +1,5 @@
 {
   "app": "trip-kanban",
   "name": "Kanban",
-  "client": { "component": "board.wasm", "site": "site", "writes": ["weave.post", "kanban.move"] }
+  "client": { "component": "board.wasm", "site": "site", "writes": ["weave.post", "kanban.move", "kanban.take", "kanban.leave"] }
 }
