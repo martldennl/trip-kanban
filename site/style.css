@@ -98,8 +98,23 @@ button:disabled { opacity: .5; cursor: default; }
 @keyframes pop { from { scale: 0; opacity: 0; } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
 
+/* Not much room (the board's frame in Weave's window is about 540 wide): still three columns side by side, everything a little smaller. */
+@media (max-width: 760px) {
+  body { padding: 10px; gap: 10px; font-size: 12.5px; }
+  #columns { gap: 8px; }
+  .column { padding: 7px; border-radius: 10px; }
+  .column h2 { margin: 1px 2px 8px; font-size: 11.5px; gap: 6px; }
+  .dot { width: 11px; height: 11px; }
+  .cards { gap: 6px; }
+  .card { padding: 8px 9px; gap: 5px; border-radius: 9px; }
+  .card h3 { font-size: 13px; }
+  .card .text { font-size: 11.5px; }
+  .label { padding: 0 8px 0 6px; font-size: 11px; }
+  .icon { font-size: 12px; }
+  .meta, .moved { font-size: 10.5px; }
+}
 /* Narrow (a phone): the columns one under the other. */
-@media (max-width: 640px) {
+@media (max-width: 430px) {
   #columns { grid-template-columns: 1fr; }
   #plan { flex-wrap: wrap; gap: 8px 14px; }
   #bar { order: 3; flex-basis: 100%; }
